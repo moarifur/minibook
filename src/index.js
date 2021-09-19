@@ -29,8 +29,7 @@ const BookList = () => {
     </section>
   );
 };
-const Book = (props) => {
-  const { title, author, imgLink } = props;
+const Book = ({ title, author, imgLink }) => {
   return (
     <article className="book">
       <img src={imgLink} width="280" height="200" />
