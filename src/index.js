@@ -7,25 +7,35 @@ const firstBook = {
   author: "Amelia Hepworth",
   imgLink: "https://tinyurl.com/4px79m2u",
 };
+const secondBook = {
+  title: `Magic's Toll: Cursebound`,
+  author: "Toni Binns",
+  imgLink: "https://tinyurl.com/36b6j9ww",
+};
 
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book
+        title={firstBook.title}
+        author={firstBook.author}
+        imgLink={firstBook.imgLink}
+      />
+      <Book
+        title={secondBook.title}
+        author={secondBook.author}
+        imgLink={secondBook.imgLink}
+      />
     </section>
   );
 };
-const Book = () => {
+const Book = (props) => {
+  const { title, author, imgLink } = props;
   return (
     <article className="book">
-      <img src={firstBook.imgLink} width="280" height="200" />
-      <h1>{firstBook.title}</h1>
-      <h4>{firstBook.author.toUpperCase()}</h4>
+      <img src={imgLink} width="280" height="200" />
+      <h1>{title}</h1>
+      <h4>{author}</h4>
     </article>
   );
 };
