@@ -25,16 +25,22 @@ const BookList = () => {
         title={secondBook.title}
         author={secondBook.author}
         imgLink={secondBook.imgLink}
-      />
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+          architecto veniam dolore cumque odio maxime quae doloribus deleniti.
+        </p>
+      </Book>
     </section>
   );
 };
-const Book = ({ title, author, imgLink }) => {
+const Book = ({ title, author, imgLink, children }) => {
   return (
     <article className="book">
       <img src={imgLink} width="280" height="200" />
       <h1>{title}</h1>
       <h4>{author}</h4>
+      {children}
     </article>
   );
 };
